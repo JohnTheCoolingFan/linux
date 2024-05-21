@@ -1739,6 +1739,35 @@
 		status = "disabled";
 	};
 
+	/*
+	 * csi2_dphy0: used for csi2 dphy full mode,
+		       is mutually exclusive with
+		       csi2_dphy1 and csi2_dphy2
+	 * csi2_dphy1: used for csi2 dphy split mode,
+		       physical lanes use lane0 and lane1,
+		       can be used with csi2_dphy2  parallel
+	 * csi2_dphy2: used for csi2 dphy split mode,
+		       physical lanes use lane2 and lane3,
+		       can be used with csi2_dphy1  parallel
+	 */
+	csi2_dphy0: csi2-dphy0 {
+		compatible = "rockchip,rk3568-csi2-dphy";
+		rockchip,hw = <&csi_dphy>;
+		status = "disabled";
+	};
+
+	csi2_dphy1: csi2-dphy1 {
+		compatible = "rockchip,rk3568-csi2-dphy";
+		rockchip,hw = <&csi_dphy>;
+		status = "disabled";
+	};
+
+	csi2_dphy2: csi2-dphy2 {
+		compatible = "rockchip,rk3568-csi2-dphy";
+		rockchip,hw = <&csi_dphy>;
+		status = "disabled";
+	};
+
 	dsi_dphy0: mipi-dphy@fe850000 {
 		compatible = "rockchip,rk3568-dsi-dphy";
 		reg = <0x0 0xfe850000 0x0 0x10000>;
