@@ -311,7 +311,7 @@
 	};
 };
 
-&rkcif_mmu {
+&vicap_mmu {
 	status = "okay";
 };
 
@@ -319,7 +319,7 @@
 	status = "okay";
 };
 
-&rkcif {
+&vicap {
 	status = "okay";
 };
 
