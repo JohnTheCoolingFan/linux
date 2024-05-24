@@ -565,6 +565,8 @@ static int cif_plat_probe(struct platform_device *pdev)
 	struct resource *res;
 	int ret, irq;
 
+	dev_info(dev, "alan: probe start\r\n");
+
 	cif_dev = devm_kzalloc(dev, sizeof(*cif_dev), GFP_KERNEL);
 	if (!cif_dev)
 		return -ENOMEM;
@@ -644,6 +646,8 @@ static int cif_plat_probe(struct platform_device *pdev)
 
 	pm_runtime_set_suspended(&pdev->dev);
 	pm_runtime_enable(&pdev->dev);
+
+	dev_info(dev, "alan: probe end\r\n");
 
 	return 0;
 
