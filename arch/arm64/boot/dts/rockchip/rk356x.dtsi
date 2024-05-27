@@ -458,6 +458,7 @@
 	pwm0: pwm@fdd70000 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfdd70000 0x0 0x10>;
+		interrupts = <GIC_SPI 82 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&pmucru CLK_PWM0>, <&pmucru PCLK_PWM0>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm0m0_pins>;
@@ -469,6 +470,7 @@
 	pwm1: pwm@fdd70010 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfdd70010 0x0 0x10>;
+		interrupts = <GIC_SPI 82 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&pmucru CLK_PWM0>, <&pmucru PCLK_PWM0>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm1m0_pins>;
@@ -480,6 +482,7 @@
 	pwm2: pwm@fdd70020 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfdd70020 0x0 0x10>;
+		interrupts = <GIC_SPI 82 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&pmucru CLK_PWM0>, <&pmucru PCLK_PWM0>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm2m0_pins>;
@@ -491,6 +494,8 @@
 	pwm3: pwm@fdd70030 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfdd70030 0x0 0x10>;
+		interrupts = <GIC_SPI 82 IRQ_TYPE_LEVEL_HIGH>,
+			<GIC_SPI 86 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&pmucru CLK_PWM0>, <&pmucru PCLK_PWM0>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm3_pins>;
@@ -1566,6 +1571,7 @@
 	pwm4: pwm@fe6e0000 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfe6e0000 0x0 0x10>;
+		interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&cru CLK_PWM1>, <&cru PCLK_PWM1>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm4_pins>;
@@ -1577,6 +1583,7 @@
 	pwm5: pwm@fe6e0010 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfe6e0010 0x0 0x10>;
+		interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&cru CLK_PWM1>, <&cru PCLK_PWM1>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm5_pins>;
@@ -1588,6 +1595,7 @@
 	pwm6: pwm@fe6e0020 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfe6e0020 0x0 0x10>;
+		interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&cru CLK_PWM1>, <&cru PCLK_PWM1>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm6_pins>;
@@ -1599,6 +1607,8 @@
 	pwm7: pwm@fe6e0030 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfe6e0030 0x0 0x10>;
+		interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_HIGH>,
+			<GIC_SPI 87 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&cru CLK_PWM1>, <&cru PCLK_PWM1>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm7_pins>;
@@ -1610,6 +1620,7 @@
 	pwm8: pwm@fe6f0000 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfe6f0000 0x0 0x10>;
+		interrupts = <GIC_SPI 84 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&cru CLK_PWM2>, <&cru PCLK_PWM2>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm8m0_pins>;
@@ -1632,6 +1643,7 @@
 	pwm10: pwm@fe6f0020 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfe6f0020 0x0 0x10>;
+		interrupts = <GIC_SPI 84 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&cru CLK_PWM2>, <&cru PCLK_PWM2>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm10m0_pins>;
@@ -1643,6 +1655,8 @@
 	pwm11: pwm@fe6f0030 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfe6f0030 0x0 0x10>;
+		interrupts = <GIC_SPI 84 IRQ_TYPE_LEVEL_HIGH>,
+			<GIC_SPI 88 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&cru CLK_PWM2>, <&cru PCLK_PWM2>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm11m0_pins>;
@@ -1654,6 +1668,7 @@
 	pwm12: pwm@fe700000 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfe700000 0x0 0x10>;
+		interrupts = <GIC_SPI 85 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&cru CLK_PWM3>, <&cru PCLK_PWM3>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm12m0_pins>;
@@ -1665,6 +1680,7 @@
 	pwm13: pwm@fe700010 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfe700010 0x0 0x10>;
+		interrupts = <GIC_SPI 85 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&cru CLK_PWM3>, <&cru PCLK_PWM3>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm13m0_pins>;
@@ -1676,6 +1692,7 @@
 	pwm14: pwm@fe700020 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfe700020 0x0 0x10>;
+		interrupts = <GIC_SPI 85 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&cru CLK_PWM3>, <&cru PCLK_PWM3>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm14m0_pins>;
@@ -1687,6 +1704,8 @@
 	pwm15: pwm@fe700030 {
 		compatible = "rockchip,rk3568-pwm", "rockchip,rk3328-pwm";
 		reg = <0x0 0xfe700030 0x0 0x10>;
+		interrupts = <GIC_SPI 85 IRQ_TYPE_LEVEL_HIGH>,
+			<GIC_SPI 89 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&cru CLK_PWM3>, <&cru PCLK_PWM3>;
 		clock-names = "pwm", "pclk";
 		pinctrl-0 = <&pwm15m0_pins>;
