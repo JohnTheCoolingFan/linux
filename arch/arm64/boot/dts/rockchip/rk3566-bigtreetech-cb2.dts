@@ -254,7 +254,19 @@
 	cpu-supply = <&vdd_cpu>;
 };
 
+&vicap {
+	status = "okay";
+};
+
 &dsi_dphy1 {
+	status = "okay";
+};
+
+&csi_dphy {
+	status = "okay";
+};
+
+&csi2_dphy0 {
 	status = "okay";
 };
 

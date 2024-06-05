@@ -565,6 +565,9 @@ static int cif_plat_probe(struct platform_device *pdev)
 	struct resource *res;
 	int ret, irq;
 
+	dev_err(&pdev->dev,
+		"alan: start probe\n");
+
 	cif_dev = devm_kzalloc(dev, sizeof(*cif_dev), GFP_KERNEL);
 	if (!cif_dev)
 		return -ENOMEM;
@@ -645,7 +648,14 @@ static int cif_plat_probe(struct platform_device *pdev)
 	pm_runtime_set_suspended(&pdev->dev);
 	pm_runtime_enable(&pdev->dev);
 
+	dev_err(&pdev->dev,
+		"alan: probe ok\n");
+
 	return 0;
+
+
+	dev_err(&pdev->dev,
+		"alan: probe error\n");
 
 err_unreg_stream_vdev:
 	cif_unregister_stream_vdev(cif_dev);
